@@ -40,3 +40,7 @@ body {
 .project a {
      text-align: center;
 }
+
+.active {
+    border: 1px solid #ee3223;
+}
