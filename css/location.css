@@ -45,18 +45,6 @@ body {
     border: 1px solid #ee3223;
 }
 
-img.resize {
-    max-width: 300px;
-    max-height: 300px;
-}
-
-.images {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-right: 100px;
-    margin-bottom: 100px;
-}
-
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */

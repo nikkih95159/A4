@@ -18,43 +18,58 @@
             <h1>Muscle Groups Page!</h1>
             <h3>What muscle groups do you want to workout?</h3>
         </div>
-        <div class="images" style="display:flex">
-			<a href="#" class="images">
-                <img src="../images/arms.jpg" alt="Arms image" class="resize">
-				<p>Arms</p>
-            </a>
-            <a href="#" class="images">
-				<img src="../images/leg.png" alt="Legs image" class="resize">
-				<p>Legs</p>
-            </a>
-            <a href="#" class="images">
-				<img src="../images/abs.png" alt="Abs image" class="resize">
-				<p>Abs</p>
-            </a>
-            <a href="#" class="images">
-				<img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
-				<p>Shoulders</p>
-            </a>
-            <a href="#" class="images">
-				<img src="../images/back.jpg" alt="Back image" class="resize">
-				<p>Back</p>
-            </a>
-            <a href="#" class="images">
-				<img src="../images/chest.png" alt="Chest image" class="resize">
-				<p>Chest</p>
-            </a>
-		</div>
-        <div class="project">
-            <a href="durationtime.html">
-                <h4>Next</h4>
-            </a>
-            <a href="location.html">
-                <h4>Back</h4>
-            </a>
-        </div>
+        <form>
+            <div class="images" style="display:flex">
+                <div class="images">
+                    <img src="../images/arms.jpg" alt="Arms image" class="resize"> 
+                    <hr>
+                    <input type="checkbox" name="muscle" value="arms"> Arms<br>    
+                </div>
+                <div class="images">
+                    <img src="../images/leg.png" alt="Legs image" class="resize"> 
+                    <hr>
+                    <input type="checkbox" name="muscle" value="Legs"> Legs<br>
+                </div>
+                <div class="images">
+                    <img src="../images/abs.png" alt="Abs image" class="resize">
+                    <hr>
+                    <input type="checkbox" name="muscle" value="Abs"> Abs<br>
+                </div>
+                <div class="images">
+                    <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
+                    <hr>
+                    <input type="checkbox" name="muscle" value="shoulders"> Shoulders<br>
+                </div>
+                <dive class="images">
+                    <img src="../images/back.jpg" alt="Back image" class="resize">
+                    <hr>
+                    <input type="checkbox" name="muscle" value="back"> Back<br>
+                </dive>
+                <div class="images">
+                    <img src="../images/chest.png" alt="Chest image" class="resize">
+                    <hr>
+                    <input type="checkbox" name="muscle" value="chest"> Chest<br>
+                </div>
+            </div>
+        </form>
+
+            <div class="project">
+                <a href="durationtime.html">
+                    <h4>Next</h4>
+                </a>
+                <a href="location.html">
+                    <h4>Back</h4>
+                </a>
+            </div>
 
         <div class="project">
-			<button>Help?</button>
+			<button id="help">Help?</button>
+		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Select muscle groups that you want to workout!</p>
+			</div>
 		</div>
     
     </div>
@@ -62,6 +77,6 @@
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/home.js"></script>
+	<script src="../js/musclegroups.js"></script>
 </body>
 </html>

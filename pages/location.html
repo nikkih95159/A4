@@ -20,6 +20,17 @@
         </div>
 
         <div class="project">
+            <input class="project" type="text" placeholder="Search for a gym">
+            <h4>Nearby gyms:</h3>
+            <form>
+                <input type="checkbox" name="gym" value="regencia"> La Regencia<br> 
+                <input type="checkbox" name="gym" value="costaverde"> Costa Verde<br> 
+                <input type="checkbox" name="gym" value="regents"> Regents Court<br> 
+                <input type="checkbox" name="gym" value="rimac"> Rimac<br> 
+            </form>
+        </div>
+
+        <div class="project">
             <a href="musclegroups.html">
                 <h4>Next</h4>
             </a>
@@ -27,12 +38,22 @@
                 <h4>Back</h4>
             </a>
         </div>
+
+        <div class="project">
+			<button id="help">Help?</button>
+		</div>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Select a gym nearby you that you plan to workout at!</p>
+			</div>
+		</div>
     
     </div>
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- <script src="js/home.js"></script> -->
+	<script src="../js/location.js"></script>
 </body>
 </html>
