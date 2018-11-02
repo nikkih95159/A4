@@ -44,3 +44,15 @@ body {
 .active {
     border: 1px solid #ee3223;
 }
+
+img.resize {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.images {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
