@@ -1,39 +1,31 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 <head>
 	<title>Gym-Pal</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="css/home.css" rel="stylesheet">
 
 </head>
 
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>Gym-Pal</h1>
-			<p>An application that helps you guide your workouts!</p>
+	<div class="container-fluid">
+		<div class="jumbotron jumbotron-fluid">
+			<h3 class="display-4">Welcome to Gym-Pal!</h3>
+			<p class="lead">We'll help build your workouts.</p>
 		</div>
 
-		<div class="project">
-			<a href="pages/location.html">
-				<h4>Start!</h4>
-			</a>
-		</div>
+		<a href="pages/workoutbegin.html">
+			<button type="button" class="btn btn-info">Most Recent Workout</button>
+		</a>
+		<a href="pages/location.html">
+			<button type="button" class="btn btn-primary">Start!</button>
+		</a>
+		<hr>
+		<button id="help" type="button" class="btn btn-secondary">Help?</button>
 
-		<div class="project">
-			<a href="pages/workoutbegin.html">
-				<h4>Most Recent Workout</h4>
-				<hr>
-			</a>
-		</div>
-
-		<div class="project">
-			<button id="help">Help?</button>
-		</div>
 		<div id="myModal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
@@ -43,7 +35,7 @@
 
 	</div>
 
-  <!-- include JavaScript near the end of the HTML file -->
+  	<!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/home.js"></script>
