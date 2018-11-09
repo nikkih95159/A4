@@ -55,6 +55,13 @@ img.resize {
     margin-right: 100px;
     margin-bottom: 100px;
 }
+#right{
+	float: right;
+}
+
+#left{
+	float: left;
+} 
 /*
 .gymlayout {
 	display: block;
