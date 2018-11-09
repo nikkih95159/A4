@@ -1,0 +1,25 @@
+/* Created a new .css for the videoguide page to make changes regarding the videoguide pages*/
+
+
+.gymlayout {
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 50%;
+}
+
+.videoguideimages{
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+	width: 50%;
+
+}
+
+#right{
+	float: right;
+}
+
+#left{
+	float: left;
+}
