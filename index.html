@@ -11,16 +11,20 @@
 </head>
 
 <body background="images/Sports.png">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="jumbotron jumbotron-fluid">
 			<h3 class="display-4">Welcome to Gym-Pal!</h3>
 			<p class="lead">We'll help build your workouts.</p>
 
-<!--implement log in screen features-->
+			<!--implement log in screen features-->
 			<form>
-				Username: <input type="text" name="username"> <br>
-				Password: <input type="text" name="password"> <br>
-				<input type="checkbox" checked="checked" name="rememberme"> Remember me
+				<div class="form-group">
+					<h5 class="lead">Username: </h5>
+						<input type="username" id="username" name="username" placeholder="Username"> <br>
+					<h5 class="lead">Password: </h5>
+						<input type="password" id="userPassword" name="password" placeholder="Password"> <br>
+					<input type="checkbox" checked="checked" name="rememberme"> Remember me
+				</div>
 			</form>
 		</div>
 

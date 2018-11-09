@@ -14,8 +14,7 @@
     <div class="container-fluid">
 
         <div class="jumbotron">
-            <h1>Muscle Groups Page!</h1>
-            <h3>What muscle groups do you want to workout?</h3>
+            <h3 class="display-4">What muscle groups do you want to workout?</h3>
         </div>
         <div id="chosenLocation">
         </div>
@@ -24,32 +23,32 @@
                 <div class="images">
                     <img src="../images/arms.jpg" alt="Arms image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="arms"> Arms<br>
+                    <input type="checkbox" name="muscle" value="arms" onclick="toggle()"> Arms<br>    
                 </div>
                 <div class="images">
                     <img src="../images/leg.png" alt="Legs image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="Legs"> Legs<br>
+                    <input type="checkbox" name="muscle" value="legs" onclick="toggle()"> Legs<br>
                 </div>
                 <div class="images">
                     <img src="../images/abs.png" alt="Abs image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="Abs"> Abs<br>
+                    <input type="checkbox" name="muscle" value="abs" onclick="toggle()"> Abs<br>
                 </div>
                 <div class="images">
                     <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="shoulders"> Shoulders<br>
+                    <input type="checkbox" name="muscle" value="shoulders" onclick="toggle()"> Shoulders<br>
                 </div>
                 <dive class="images">
                     <img src="../images/back.jpg" alt="Back image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="back"> Back<br>
+                    <input type="checkbox" name="muscle" value="back" onclick="toggle()"> Back<br>
                 </dive>
                 <div class="images">
                     <img src="../images/chest.png" alt="Chest image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="chest"> Chest<br>
+                    <input type="checkbox" name="muscle" value="chest" onclick="toggle()"> Chest<br>
                 </div>
             </div>
         </form>
@@ -59,7 +58,7 @@
                     <button type="button" class="btn btn-info">Back</button>
                 </a>
                 <a href="durationtime.html">
-                    <button type="button" class="btn btn-primary">Next</button>
+                    <button type="button" class="btn btn-primary" id="next">Next</button>
                 </a>
                 <hr>
             </div>

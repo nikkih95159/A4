@@ -12,12 +12,12 @@ function toggle() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+    console.log('hi');
 	if (localStorage.location) 
-		document.getElementById("chosenLocation").innerHTML = "Your chosen gym location is: " + localStorage.getItem("location");
+        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h5>Your chosen gym location is: " + 
+        localStorage.getItem("location") +"</h5></div>";
 	else 
 		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
-		// $("#start").click(function(e) {	
-	// });
 }
 
 var modal = document.getElementById('myModal');

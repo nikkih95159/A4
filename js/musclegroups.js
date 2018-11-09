@@ -1,18 +1,22 @@
 // Call this function when the page loads (the jQuery "ready" event)
 $(document).ready(function() {
+	document.getElementById("next").disabled = true;
 	initializePage();
 })
+
+function toggle() {
+    document.getElementById("next").disabled = false;
+}
 
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	if (localStorage.location) 
-		document.getElementById("chosenLocation").innerHTML = "Your chosen gym location is: " + localStorage.getItem("location");
+		document.getElementById("chosenLocation").innerHTML = "<div class='container'><h5> Your chosen gym location is at: " + 
+		localStorage.getItem("location") + "</h5></div>";
 	else 
 		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
-		// $("#start").click(function(e) {	
-	// });
 }
 
 var modal = document.getElementById('myModal');

@@ -8,9 +8,7 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#start").click(function(e) {
-		
-	});
+
 }
 
 var modal = document.getElementById('myModal');
