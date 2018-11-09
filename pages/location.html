@@ -6,41 +6,67 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
-	<link href="../css/home.css" rel="stylesheet">
+	<link href="../css/location.css" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="container">
+<body background="../images/Sports.png">
+    <div class="container-fluid">
 
         <div class="jumbotron">
-            <h1>Location Page!</h1>
             <h3>What gym do you want to go to?</h3>
         </div>
 
-        <div class="project">
-            <input class="project" type="text" placeholder="Search for a gym">
-            <h4>Nearby gyms:</h3>
-            <form>
-                <input type="checkbox" name="gym" value="regencia"> La Regencia<br> 
-                <input type="checkbox" name="gym" value="costaverde"> Costa Verde<br> 
-                <input type="checkbox" name="gym" value="regents"> Regents Court<br> 
-                <input type="checkbox" name="gym" value="rimac"> Rimac<br> 
-            </form>
+        <div class="container">
+            <div class="row">
+                <!-- <select class=custom-select">
+                    <option selected>Select a gym</option>
+                    <option value="costaverde" name="gym">Costa Verde</option>
+                    <option value="crossroads" name="gym">La Jolla Crossroads</option>
+                    <option value="regencia" name="gym">La Regencia</option>
+                    <option value="main" name="gym">Main Gym</option>
+                    <option value="regents" name="gym">Regents Court</option>
+                    <option value="rimac" name="gym">Rimac</option>
+                </select> -->
+                <div class="col-6 col-sm-4">
+                    <p><button class="btn btn-info" onclick="geoFindMe()">Search by your location</button></p>
+                    <div id="out"></div>
+                </div>
+            </div>
         </div>
 
-        <div class="project">
-            <a href="musclegroups.html">
-                <h4>Next</h4>
-            </a>
+        <div class="container">
+            <div class="row">
+                <div class="form-check">    
+                    <h5>Quick select gyms:</h5>
+                    <form action="">
+                        <input type="checkbox" name="gym" value="regencia" id="regencia" onclick="toggle()"> La Regencia<br> 
+                        <input type="checkbox" name="gym" value="costaverde" id="costaverde" onclick="toggle()"> Costa Verde<br> 
+                        <input type="checkbox" name="gym" value="regents" id="regents" onclick="toggle()"> Regents Court<br> 
+                        <input type="checkbox" name="gym" value="rimac" id="rimac" onclick="toggle()"> Rimac<br> 
+                        <input type="checkbox" name="gym" value="main" id="main" onclick="toggle()"> Main Gym<br> 
+                        <input type="checkbox" name="gym" value="crossroads" id="crossroads" onclick="toggle()"> La Jolla Crossroads<br> 
+                    </form>
+                    <button class="btn btn-light btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
             <a href="../index.html">
-                <h4>Back</h4>
+                <button type="button" class="btn btn-info">Back</button>
             </a>
+            <a href="musclegroups.html">
+                <button type="button" class="btn btn-primary" onclick="getLocation()" id="next">Next</button>
+            </a>
+            <hr>
         </div>
 
-        <div class="project">
-			<button id="help">Help?</button>
+        <div class="container">
+            <a href="../index.html">
+                <button type="button" class="btn btn-success">Home</button>
+            </a>
+			<button type="button" id="help" class="btn btn-secondary">Help?</button>
 		</div>
 		<div id="myModal" class="modal">
 			<div class="modal-content">
@@ -53,7 +79,7 @@
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/location.js"></script>
 </body>
 </html>
