@@ -8,8 +8,8 @@ $(document).ready(function() {
  */
 function initializePage() {
 	if (localStorage.location && localStorage.selectedTime) 
-        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h5> Your chosen gym location is at: " + localStorage.getItem("location")
-         + " for " + localStorage.getItem("selectedTime") + " minutes.</h5></div>";
+        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6> Location: " + localStorage.getItem("location")
+         + "<br>Time: " + localStorage.getItem("selectedTime") + " minutes</h6></div>";
 	else 
 		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
 }
