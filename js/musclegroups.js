@@ -36,3 +36,8 @@ window.onclick = function(event) {
 		modal.style.display = "none";
 	}
 }
+
+function getMuscles() {
+	var selMuscles = document.querySelector('input[name=muscle]:checked').value;
+	localStorage.setItem("selectedMuscles", selMuscles);
+}
