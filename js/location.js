@@ -38,11 +38,6 @@ window.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 }
 function geoFindMe() {
 	var output = document.getElementById("out");
@@ -57,14 +52,7 @@ function geoFindMe() {
 	  var longitude = position.coords.longitude;
 	  
 	  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-<<<<<<< HEAD
-=======
 
-	//   var img = new Image();
-	//   img.src = "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false";
-  
-	//   output.appendChild(img);
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 	}
   
 	function error() {
@@ -142,8 +130,4 @@ radios.forEach(function(radio) {
 function getLocation() {
 	var gymLocation = document.querySelector('input[name=gym]:checked').value;
 	localStorage.setItem("location", gymLocation);
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 }

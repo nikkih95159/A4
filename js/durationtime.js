@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Call this function when the page loads (the jQuery "ready" event)
 $(document).ready(function() {
     document.getElementById("next").disabled = true;
@@ -21,8 +20,6 @@ function initializePage() {
 	// });
 }
 
-=======
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 var modal = document.getElementById('myModal');
 
 // Get the button that opens the modal
@@ -67,10 +64,7 @@ function reset() {
     document.getElementById('105').checked = false;
     document.getElementById('120').disabled = false;
     document.getElementById('120').checked = false;
-<<<<<<< HEAD
     document.getElementsById('next').disabled = true;
-=======
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 }
 
 radios.forEach(function(radio) {
@@ -82,10 +76,6 @@ radios.forEach(function(radio) {
 });
 
 function getTime() {
-<<<<<<< HEAD
     var selTime = document.querySelector('input[name=time]:checked').value;
     localStorage.setItem("selectedTime", selTime);
-=======
-    var checkedValue = document.querySelector('input[name=time]:checked').value;
->>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
 }
