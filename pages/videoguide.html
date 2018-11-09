@@ -6,58 +6,59 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../css/home.css" rel="stylesheet">
 	<link href="../css/videoguide.css" rel="stylesheet">
 
 </head>
 
-<body background="../images/Sports.png">
-    <div class="container-fluid">
+<body>
+    <div class="container">
 
         <div class="jumbotron">
 
 						<h1>Arm Workout</h1>
-						<h3>#1 Preacher Curl</h3>
-						<h5>(Duration: 10 min)</h5>
+						<h3>Preacher Curl</h3>
+						<h5>(Duration: -- min)</h5>
 
 						<!--gif of workout-->
 						<img class="videoguideimages" src="../images/pic1.gif" alt="Preacher Curl">
-						<!--How to do preacher curls-->
-						<h5>Preacher Curls help build up the lower part of your bicep! To begin Preacher Curls:
-						<ol>
-							<li>Sit on the machine so that the pad is slanted away from you.</li>
-							<li>Put your upper arms in front of the pad and your chest against the back</li>
-							<li>Firmly grip the barbell and this is you starting position!</li>
-						</ol>
-					</h5>
+
+						<!--Description/Facts-->
+						<h5>Preacher Curls help build up the lower part of your biceps!</h5>
+						 <h6>For an effective workout, make sure to:
+						<ul>
+							<li>Sit so that the pad is slanted away from you.</li>
+							<li>Put your upper arms in front of the pad and your chest against the back.</li>
+							<li>Firmly grip the barbell and slowly bring it towards you.</li>
+							<li>Don't bend your wrists and make sure to use manageable weights.</li>
+						</ul>
+					</h6>
         </div>
 
-        <div class="container">
-			<!--buttons on the right side of the page-->
-				<a href="workoutbegin.html">
-                	<button class="btn btn-info" type="button">Back</button>
-				</a>
-				<a href="videoguide2.html">
-					<button class="btn btn-primary" type="button">Next</button>
-				</a>
-			<!--buttons on the left side of the page-->
-            <hr>
-		</div>
-    
-        <div class="container">
-            <a href="../index.html">
-                <button type="button" class="btn btn-success">Home</button>
-			</a>
-			<a href="gymlayout.html">
-					<button class="btn btn-dark" type="button">Lost?</button>
-			</a>
-		</div>
+        <div class="project">
+<!--buttons on the right side of the page-->
+					<div id="right">
+						<a href="videoguide2.html">
+		            <h4>Next</h4>
+							</a>
+            <a href="gymlayout.html">
+                <button>Lost?</button>
+							</a>
+					</div>
+<!--buttons on the left side of the page-->
+					<div id="left">
+						<form>
+							<input type="button" value="Back" onclick="history.back()">
+						</form>
+					</div>
+        </div>
 
-</div>
+    </div>
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<!-- <script src="js/home.js"></script> -->
 </body>
 </html>

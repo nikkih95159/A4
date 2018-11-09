@@ -17,43 +17,51 @@
 
         <div class="jumbotron">
 
-						<h1>Arm Workout</h1>
-						<h3>#2 Barbell Curl </h3>
-						<h5>(Duration: 10 min)</h5>
+						<h1>Shoulder Workout</h1>
+						<h3>Arnold Press</h3>
+						<h5>(Duration: -- min)</h5>
 
 						<!--gif of workout-->
-						<img class="videoguideimages" src="../images/barbellCurl.gif" alt="barbellCurl">
-						<h5>Mix things up in your arm workout with Barbell Curls!
-							<ol>
-								<li>Stand straight up with leges spread at shoulder length.</li>
-							</ol>
-						</h5>
+						<img class="videoguideimages" src="../images/arnoldpress.gif" alt="arnold press">
+
+						<!--Description/Facts-->
+						<h5>Arnold Press helps to strengthen your shoulders!</h5>
+							<h6>For an effective workout, make sure to:
+							<ul>
+								<li>Stand straight up with legs spread at shoulder length.</li>
+								<li>Let the barbell hang at arm's length in front of you.</li>
+								<li>Slowly lift the bar upwards to your chest while keeping your upper-arms still.</li>
+								<li>Remember to keep your back straight and to not swing the weight as it will make it easier for you to lift the weight.</li>
+							</ul>
+						</h6>
+
+
+
         </div>
 
-        <div class="container">
-         <!--buttons on the right side of the page-->
-         <a href="videoguide.html">
-                <button class="btn btn-info" type="button">Back</button>
-            </a>   
-         <a href="videoguide3.html">
-                <button class="btn btn-primary" type="button">Next</button>
-            </a>
-            <hr>
-        </div>
-        <div class="container">
-        <!--buttons on the left side of the page-->
-            <a href="../index.html">
-                <button type="button" class="btn btn-success">Home</button>
+        <div class="project">
+<!--buttons on the right side of the page-->
+          <div id="right">
+						<a href="videoguide3.html">
+                <h4>Next</h4>
             </a>
             <a href="gymlayout.html">
-                    <button type="button" class="btn btn-dark">Lost?</button>
+                <button>Lost?</button>
             </a>
-        </div>   
+            </div>
+<!--buttons on the left side of the page-->
+            <div id="left">
+							<form>
+								<input type="button" value="Back" onclick="history.back()">
+							</form>
+            </a>
+            </div>
+        </div>
     </div>
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="../js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<!-- <script src="js/home.js"></script> -->
 </body>
 </html>
