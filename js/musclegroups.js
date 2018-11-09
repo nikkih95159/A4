@@ -7,9 +7,12 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	$("#start").click(function(e) {
-		
-	});
+	if (localStorage.location) 
+		document.getElementById("chosenLocation").innerHTML = "Your chosen gym location is: " + localStorage.getItem("location");
+	else 
+		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
+		// $("#start").click(function(e) {	
+	// });
 }
 
 var modal = document.getElementById('myModal');

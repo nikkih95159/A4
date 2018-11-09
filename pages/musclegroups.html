@@ -6,17 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../css/home.css" rel="stylesheet">
 
 </head>
 
-<body>
-    <div class="container">
+<body background="../images/Sports.png">
+    <div class="container-fluid">
 
         <div class="jumbotron">
             <h1>Muscle Groups Page!</h1>
             <h3>What muscle groups do you want to workout?</h3>
+        </div>
+        <div id="chosenLocation">
         </div>
         <form>
             <div class="images" style="display:flex">
@@ -54,6 +55,7 @@
         </form>
 
             <div class="project">
+<<<<<<< HEAD
                 <a href="durationtime.html">
 <<<<<<< Updated upstream
                     <h4>Next</h4>
@@ -66,16 +68,27 @@
                 <a href="overview.html">
                     <button type="button" class="btn btn-primary" onclick="getMuscles()">Next</button>
 >>>>>>> Stashed changes
+=======
+                <a href="location.html">
+                    <button type="button" class="btn btn-info">Back</button>
                 </a>
+                <a href="durationtime.html">
+                    <button type="button" class="btn btn-primary">Next</button>
+>>>>>>> 4c6ad7976482a23ec31ee12acdb83e0f363376c8
+                </a>
+                <hr>
             </div>
 
         <div class="project">
-			<button id="help">Help?</button>
+            <a href="../index.html">
+                <button type="button" class="btn btn-success">Home</button>
+            </a>
+			<button type="button" class="btn btn-secondary" id="help">Help?</button>
 		</div>
 		<div id="myModal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-				<p>Select muscle groups that you want to workout!</p>
+				<p>Feel free to pick only one body part to focus on or as many as you want!</p>
 			</div>
 		</div>
     
@@ -83,7 +96,7 @@
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
 	<script src="../js/musclegroups.js"></script>
 </body>
 </html>
