@@ -8,15 +8,12 @@ function toggle() {
     document.getElementById("next").disabled = false;
 }
 
-/*
- * Function that is called when the document is ready.
- */
 function initializePage() {
-	if (localStorage.location) 
-		document.getElementById("chosenLocation").innerHTML = "<div class='container'><h5> Your chosen gym location is at: " + 
-		localStorage.getItem("location") + "</h5></div>";
-	else 
-		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
+	// if (localStorage.location) 
+	// 	document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6>Location: " + 
+	// 	localStorage.getItem("location") + "</h6></div>";
+	// else 
+	// 	document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
 }
 
 var modal = document.getElementById('myModal');
@@ -44,6 +41,7 @@ window.onclick = function(event) {
 	}
 }
 
+/* get the selected muscles user chooses */
 function getMuscles() {
 	var selMuscles = document.querySelector('input[name=muscle]:checked').value;
 	localStorage.setItem("selectedMuscles", selMuscles);

@@ -6,52 +6,67 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
-	<link href="../css/home.css" rel="stylesheet">
+    <link href="../css/musclegroups.css" rel="stylesheet">
 
 </head>
 
 <body background="../images/Sports.png">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+		<a class="navbar-brand">Workout Builder</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="index.html">Login</a>
+		  </div>
+		</div>
+	  </nav>
     <div class="container-fluid">
 
         <div class="jumbotron">
             <h3 class="display-4">What muscle groups do you want to workout?</h3>
+            <h6>Select two muscles to workout!</h6>
         </div>
-        <div id="chosenLocation">
-        </div>
+  
         <form>
             <div class="container" style="display:flex">
                 <div class="container">
                     <div class="images">
-                        <img src="../images/arms.jpg" alt="Arms image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="arms" onclick="toggle()"> Arms<br>    
+                        <!-- <img src="../images/arms.jpg" alt="Arms image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="arms" name="muscle" value="arms" onclick="toggle()"> Arms<br>    
+                        <label for="arms"><img src="../images/arms.jpg" alt="Arms image" class="resize"></label>
                     </div>
                     <div class="images">
-                        <img src="../images/leg.png" alt="Legs image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="legs" onclick="toggle()"> Legs<br>
+                        <!-- <img src="../images/leg.png" alt="Legs image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="legs" name="muscle" value="legs" onclick="toggle()"> Legs<br>
+                        <label for="legs"><img src="../images/leg.png" alt="Legs image" class="resize"></label>
                     </div>
                     <div class="images">
-                        <img src="../images/abs.png" alt="Abs image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="abs" onclick="toggle()"> Abs<br>
+                        <!-- <img src="../images/abs.png" alt="Abs image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="abs" name="muscle" value="abs" onclick="toggle()"> Abs<br>
+                        <label for="abs"><img src="../images/abs.png" alt="Abs image" class="resize"></label>
                     </div>
                 </div>
                 <div class="container">
                     <div class="images">
-                        <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="shoulders" onclick="toggle()"> Shoulders<br>
+                        <!-- <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="shoulders" name="muscle" value="shoulders" onclick="toggle()"> Shoulders<br>
+                        <label for="shoulders"><img src="../images/shoulder.jpg" alt="Shoulders image" class="resize"></label>
                     </div>
                     <div class="images">
-                        <img src="../images/back.jpg" alt="Back image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="back" onclick="toggle()"> Back<br>
+                        <!-- <img src="../images/back.jpg" alt="Back image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="back" name="muscle" value="back" onclick="toggle()"> Back<br>
+                        <label for="back"><img src="../images/back.jpg" alt="Back image" class="resize"></label>
                     </div>
                     <div class="images">
-                        <img src="../images/chest.png" alt="Chest image" class="resize">
-                        <hr>
-                        <input type="checkbox" name="muscle" value="chest" onclick="toggle()"> Chest<br>
+                        <!-- <img src="../images/chest.png" alt="Chest image" class="resize">
+                        <hr> -->
+                        <input type="checkbox" id="chest" name="muscle" value="chest" onclick="toggle()"> Chest<br>
+                        <label for="chest"><img src="../images/chest.png" alt="Chest image" class="resize"></label>
                     </div>
                 </div>
             </div>
@@ -62,15 +77,12 @@
                     <button type="button" class="btn btn-info">Back</button>
                 </a>
                 <a href="durationtime.html">
-                    <button type="button" class="btn btn-primary" id="next">Next</button>
+                    <button type="button" style="float: right;" class="btn btn-primary" id="next"onclick="getMuscles()">Next</button>
                 </a>
                 <hr>
             </div>
 
         <div class="container">
-            <a href="../index.html">
-                <button type="button" class="btn btn-success">Home</button>
-            </a>
 			<button type="button" class="btn btn-secondary" id="help">Help?</button>
 		</div>
 		<div id="myModal" class="modal">

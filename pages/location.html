@@ -1,25 +1,34 @@
 <!doctype html>
 
-<html>
+<html lang="en">
 <head>
 	<title>Location</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/location.css" rel="stylesheet">
 
 </head>
 
 <body background="../images/Sports.png">
-    <div class="container">
-
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+		<a class="navbar-brand">Workout Builder</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="index.html">Login</a>
+		  </div>
+		</div>
+	</nav>
+      <div class="container">
         <div class="jumbotron">
             <h3 class="display-4">What gym do you want to go to?</h3>
+            <h6>Please select a location before clicking next!</h6>
         </div>
 
-        <div class="container">
+        <!-- <div class="container">
             <div class="row">
-                <!-- <select class=custom-select">
+                <select class=custom-select">
                     <option selected>Select a gym</option>
                     <option value="costaverde" name="gym">Costa Verde</option>
                     <option value="crossroads" name="gym">La Jolla Crossroads</option>
@@ -27,29 +36,38 @@
                     <option value="main" name="gym">Main Gym</option>
                     <option value="regents" name="gym">Regents Court</option>
                     <option value="rimac" name="gym">Rimac</option>
-                </select> -->
-                <!-- <div class="col-6 col-sm-4">
+                </select>
+                <div class="col-6 col-sm-4">
                     <p><button class="btn btn-info" onclick="geoFindMe()">Search by your location</button></p>
-                    <div id="out"></div> -->
+                    <div id="out"></div>
                 
             </div>
-        </div>
+        </div> -->
 
         <div class="container">
             <div class="row">
                 <div class="form-check">    
-                    <h5 class="lead">Quick select gyms:</h5>
-                    <form action="">
+                    <h5 class="lead">Select a gym:</h5>
+                    <!-- <form action="">
                         <input type="checkbox" name="gym" value="La Regencia" id="regencia" onclick="toggle()"> La Regencia<br> 
                         <input type="checkbox" name="gym" value="Costa Verde" id="costaverde" onclick="toggle()"> Costa Verde<br> 
                         <input type="checkbox" name="gym" value="Regents Court" id="regents" onclick="toggle()"> Regents Court<br> 
                         <input type="checkbox" name="gym" value="Rimac Gym" id="rimac" onclick="toggle()"> Rimac<br> 
                         <input type="checkbox" name="gym" value="Main Gym" id="main" onclick="toggle()"> Main Gym<br> 
                         <input type="checkbox" name="gym" value="Crossroads" id="crossroads" onclick="toggle()"> La Jolla Crossroads<br> 
-                    </form>
+                    </form> -->
+                    <select id="gymSelect" class="custom-select" onclick="toggle()">
+                            <option selected>Select a gym</option>
+                            <option name="gym" value="La Regencia" id="regencia">La Regencia</option>
+                            <option name="gym" value="Costa Verde" id="costaverde">Costa Verde</option>
+                            <option name="gym" value="Regents Court" id="regents">Regents</option>
+                            <option name="gym" value="Rimac Gym" id="rimac">Rimac</option>
+                            <option name="gym" value="Main Gym" id="main">Main Gym</option>
+                            <option name="gym" value="Crossroads" id="crossroads">La Jolla Crossroads</option>
+                        </select>
                     <p></p>
-                    <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button>
-                    <p></p>
+                    <!-- <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button>
+                    <p></p> -->
                 </div>
             </div>
         </div>
@@ -59,15 +77,12 @@
                 <button type="button" class="btn btn-info">Back</button>
             </a>
             <a href="musclegroups.html">
-                <button type="button" class="btn btn-primary" onclick="getLocation()" id="next">Next</button>
+                <button type="button" style="float: right;" class="btn btn-primary" onclick="getLocation()" id="next">Next</button>
             </a>
             <hr>
         </div>
 
         <div class="container">
-            <a href="../index.html">
-                <button type="button" class="btn btn-success">Home</button>
-            </a>
 			<button type="button" id="help" class="btn btn-secondary">Help?</button>
 		</div>
 		<div id="myModal" class="modal">
@@ -76,9 +91,7 @@
 				<p>Select a gym nearby you that you plan to workout at!</p>
 			</div>
 		</div>
-    
     </div>
-
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="../js/bootstrap.min.js"></script>

@@ -101,33 +101,34 @@ function distance(position1,position2){
 	return d;
 }
 
-var radios = [].slice.call(document.querySelectorAll('input[name=gym]'));
+// var radios = [].slice.call(document.querySelectorAll('input[name=gym]'));
 
-function reset() {
-		document.getElementById('regencia').disabled = false;
-		document.getElementById('regencia').checked = false;
-		document.getElementById('costaverde').disabled = false;
-		document.getElementById('costaverde').checked = false;
-		document.getElementById('regents').disabled = false;
-		document.getElementById('regents').checked = false;
-		document.getElementById('rimac').disabled = false;
-		document.getElementById('rimac').checked = false;
-		document.getElementById('main').disabled = false;
-		document.getElementById('main').checked = false;
-		document.getElementById('crossroads').disabled = false;
-		document.getElementById('crossroads').checked = false;
-		document.getElementById('next').disabled = true;
-}
+// function reset() {
+// 		document.getElementById('regencia').disabled = false;
+// 		document.getElementById('regencia').checked = false;
+// 		document.getElementById('costaverde').disabled = false;
+// 		document.getElementById('costaverde').checked = false;
+// 		document.getElementById('regents').disabled = false;
+// 		document.getElementById('regents').checked = false;
+// 		document.getElementById('rimac').disabled = false;
+// 		document.getElementById('rimac').checked = false;
+// 		document.getElementById('main').disabled = false;
+// 		document.getElementById('main').checked = false;
+// 		document.getElementById('crossroads').disabled = false;
+// 		document.getElementById('crossroads').checked = false;
+// 		document.getElementById('next').disabled = true;
+// }
 
-radios.forEach(function(radio) {
-		radio.addEventListener('change', function() { 
-				radios.forEach(function(r) {
-						r.disabled = r !== radio;
-				});
-		});
-});
+// radios.forEach(function(radio) {
+// 		radio.addEventListener('change', function() { 
+// 				radios.forEach(function(r) {
+// 						r.disabled = r !== radio;
+// 				});
+// 		});
+// });
 
 function getLocation() {
-	var gymLocation = document.querySelector('input[name=gym]:checked').value;
+	var e = document.getElementById("gymSelect");
+    var gymLocation = e.options[e.selectedIndex].value;
 	localStorage.setItem("location", gymLocation);
 }

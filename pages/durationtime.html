@@ -5,23 +5,33 @@
 	<title>Duration Time</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../css/home.css" rel="stylesheet">
 
 </head>
 
 <body background="../images/Sports.png">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+		<a class="navbar-brand">Workout Builder</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="index.html">Login</a>
+		  </div>
+		</div>
+	</nav>
     <div class="container-fluid">
 
         <div class="jumbotron">
             <h3 class="display-4">How long do you want to workout for?</h3>
+            <h6>Select a time before clicking next!</h6>
         </div>
-
         <div id="chosenLocation"></div>
         <div class="container">
             <div class="row">
                 <div class="form-check">    
-                    <form action="">
+                    <!-- <form action="">
                         <input type="checkbox" id="15" name="time" value="15" onclick="toggle()"> 15 minutes<br> 
                         <input type="checkbox" id="30" name="time" value="30" onclick="toggle()"> 30 minutes<br> 
                         <input type="checkbox" id="45" name="time" value="45" onclick="toggle()"> 45 minutes<br> 
@@ -30,11 +40,22 @@
                         <input type="checkbox" id="90" name="time" value="90" onclick="toggle()"> 1 hour and 30 minutes<br> 
                         <input type="checkbox" id="105" name="time" value="105" onclick="toggle()"> 1 hour and 45 minutes<br> 
                         <input type="checkbox" id="120" name="time" value="120" onclick="toggle()"> 2 hours<br> 
-                        <!-- <input type="time" id="custom" placeholder="Custom Time">  -->
-                    </form>
+                        <input type="time" id="custom" placeholder="Custom Time"> 
+                    </form> -->
+                    <div class="dropdown">
+                        <div class="container">
+                        <select id="timeSelect" class="custom-select" onclick="toggle()">
+                            <option selected>Select a time</option>
+                            <option id="30" name="time" value="30">30 minutes</option>
+                            <option id="60" name="time" value="60">1 hour</option>
+                            <option id="90" name="time" value="90">1 hour and 30 minutes</option>
+                            <option id="120" name="time" value="120">2 hours</option>
+                        </select>
+                        </div>
+                    </div>
                     <p></p>
-                    <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button>
-                    <p></p>
+                    <!-- <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button> -->
+                    <!-- <p></p> -->
                 </div>
             </div>
         </div>
@@ -44,24 +65,20 @@
                 <button type="button" class="btn btn-info">Back</button>
             </a>
             <a href="overview.html">
-                <button type="button" class="btn btn-primary" onclick="getTime()" id="next">Next</button>
+                <button type="button" style="float: right;" class="btn btn-primary" onclick="getTime()" id="next">Next</button>
             </a>
             <hr>
         </div>
 
         <div class="container">
-                <a href="../index.html">
-                    <button type="button" class="btn btn-success">Home</button>
-                </a>
                 <button type="button" id="help" class="btn btn-secondary">Help?</button>
-            </div>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>Select a time that fits your schedule and we'll create a custom workout to fit that time!</p>
                 </div>
             </div>
-    
+        </div>
     </div>
 
   <!-- include JavaScript near the end of the HTML file -->

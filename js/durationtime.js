@@ -14,8 +14,8 @@ function toggle() {
 function initializePage() {
     console.log('hi');
 	if (localStorage.location) 
-        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h5>Your chosen gym location is: " + 
-        localStorage.getItem("location") +"</h5></div>";
+        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6>Location: " + 
+        localStorage.getItem("location") +"</h6></div>";
 	else 
 		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
 }
@@ -45,37 +45,60 @@ window.onclick = function(event) {
 	}
 }
 
-var radios = [].slice.call(document.querySelectorAll('input[name=time]'));
+// var radios = [].slice.call(document.querySelectorAll('input[name=time]'));
 
-function reset() {
-    document.getElementById('15').disabled = false;
-    document.getElementById('15').checked = false;
-    document.getElementById('30').disabled = false;
-    document.getElementById('30').checked = false;
-    document.getElementById('45').disabled = false;
-    document.getElementById('45').checked = false;
-    document.getElementById('60').disabled = false;
-    document.getElementById('60').checked = false;
-    document.getElementById('75').disabled = false;
-    document.getElementById('75').checked = false;
-    document.getElementById('90').disabled = false;
-    document.getElementById('90').checked = false;
-    document.getElementById('105').disabled = false;
-    document.getElementById('105').checked = false;
-    document.getElementById('120').disabled = false;
-    document.getElementById('120').checked = false;
-    document.getElementsById('next').disabled = true;
-}
+// function reset() {
+//     document.getElementById('15').disabled = false;
+//     document.getElementById('15').checked = false;
+//     document.getElementById('30').disabled = false;
+//     document.getElementById('30').checked = false;
+//     document.getElementById('45').disabled = false;
+//     document.getElementById('45').checked = false;
+//     document.getElementById('60').disabled = false;
+//     document.getElementById('60').checked = false;
+//     document.getElementById('75').disabled = false;
+//     document.getElementById('75').checked = false;
+//     document.getElementById('90').disabled = false;
+//     document.getElementById('90').checked = false;
+//     document.getElementById('105').disabled = false;
+//     document.getElementById('105').checked = false;
+//     document.getElementById('120').disabled = false;
+//     document.getElementById('120').checked = false;
+//     document.getElementsById('next').disabled = true;
+// }
 
-radios.forEach(function(radio) {
-    radio.addEventListener('change', function() { 
-        radios.forEach(function(r) {
-            r.disabled = r !== radio;
-        });
-    });
-});
+// radios.forEach(function(radio) {
+//     radio.addEventListener('change', function() { 
+//         radios.forEach(function(r) {
+//             r.disabled = r !== radio;
+//         });
+//     });
+// });
 
 function getTime() {
-    var selTime = document.querySelector('input[name=time]:checked').value;
+    var e = document.getElementById("timeSelect");
+    var selTime = e.options[e.selectedIndex].value;
     localStorage.setItem("selectedTime", selTime);
+}
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function clickDropdown() {
+    document.getElementById("timeDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-menu");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
