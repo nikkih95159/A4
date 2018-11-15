@@ -46,6 +46,7 @@
 
         <div class="container">
             <div class="row">
+                <!-- <div class="form-check">     -->
                 <div class="form-check">    
                     <h5 class="lead">Select a gym:</h5>
                     <!-- <form action="">
@@ -56,18 +57,21 @@
                         <input type="checkbox" name="gym" value="Main Gym" id="main" onclick="toggle()"> Main Gym<br> 
                         <input type="checkbox" name="gym" value="Crossroads" id="crossroads" onclick="toggle()"> La Jolla Crossroads<br> 
                     </form> -->
-                    <select id="gymSelect" class="custom-select" onclick="toggle()">
+                    <select id="gymSelect" class="custom-select" onclick="toggle()" onchange="show(this)">
                             <option selected>Select a gym</option>
                             <option name="gym" value="La Regencia" id="regencia">La Regencia</option>
                             <option name="gym" value="Costa Verde" id="costaverde">Costa Verde</option>
-                            <option name="gym" value="Regents Court" id="regents">Regents</option>
-                            <option name="gym" value="Rimac Gym" id="rimac">Rimac</option>
+                            <option name="gym" value="Regents Court" id="regents">Regents Court</option>
+                            <option name="gym" value="Rimac Gym" id="rimac">Rimac Gym</option>
                             <option name="gym" value="Main Gym" id="main">Main Gym</option>
-                            <option name="gym" value="Crossroads" id="crossroads">La Jolla Crossroads</option>
+                            <option name="gym" value="La Jolla Crossroads" id="crossroads">La Jolla Crossroads</option>
                         </select>
                     <p></p>
                     <!-- <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button>
                     <p></p> -->
+                </div>
+                <div class="col" id="gymInfo">
+                   
                 </div>
             </div>
         </div>

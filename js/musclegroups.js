@@ -43,6 +43,59 @@ window.onclick = function(event) {
 
 /* get the selected muscles user chooses */
 function getMuscles() {
-	var selMuscles = document.querySelector('input[name=muscle]:checked').value;
-	localStorage.setItem("selectedMuscles", selMuscles);
+	var armsChecked = document.getElementById("arms").checked;
+	var shouldersChecked = document.getElementById("shoulders").checked;
+	var legsChecked = document.getElementById("legs").checked;
+	var backChecked = document.getElementById("back").checked;
+	var absChecked = document.getElementById("abs").checked;
+	var chestChecked = document.getElementById("chest").checked;
+
+	if (armsChecked === true) {
+		var selArms = document.getElementById("arms").value;
+		localStorage.setItem("selectedArms", selArms);
+	}
+	else {
+		localStorage.removeItem("selectedArms");
+	}
+
+	if (shouldersChecked === true) {
+		var selShoulders = document.getElementById("shoulders").value;
+		localStorage.setItem("selectedShoulders", selShoulders);
+	}
+	else {
+		localStorage.removeItem("selectedShoulders");
+	}
+	
+	if (legsChecked === true) {
+		var selLegs = document.getElementById("legs").value;
+		localStorage.setItem("selectedLegs",selLegs);
+	}
+	else {
+		localStorage.removeItem("selectedLegs");
+	}
+
+	if (backChecked === true) {
+		var selBack = document.getElementById("back").value;
+		localStorage.setItem("selectedBack", selBack);
+	}
+	else {
+		localStorage.removeItem("selectedBack");
+	}
+
+	if (absChecked === true) {
+		var selAbs = document.getElementById("abs").value;
+		localStorage.setItem("selectedAbs", selAbs);
+	}
+	else {
+		localStorage.removeItem("selectedAbs");
+	}
+
+	if (chestChecked === true) {
+		var selChest = document.getElementById("chest").value;
+		localStorage.setItem("selectedChest", selChest);
+	}
+	else {
+		localStorage.removeItem("selectedChest");
+	}
+	
 }

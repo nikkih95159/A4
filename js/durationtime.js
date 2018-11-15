@@ -12,7 +12,6 @@ function toggle() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-    console.log('hi');
 	if (localStorage.location) 
         document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6>Location: " + 
         localStorage.getItem("location") +"</h6></div>";
