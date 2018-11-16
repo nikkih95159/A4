@@ -7,11 +7,11 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	if (localStorage.location) 
+	if (localStorage.location)
 		document.getElementById("chosenLocation").innerHTML = "Your chosen gym location is: " + localStorage.getItem("location");
-	else 
+	else
 		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
-		// $("#start").click(function(e) {	
+		// $("#start").click(function(e) {
 	// });
 }
 
@@ -23,7 +23,7 @@ var btn = document.getElementById("help");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 btn.onclick = function() {
 	modal.style.display = "block";
 }
@@ -38,4 +38,7 @@ window.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
+
+}
+
 }

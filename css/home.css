@@ -55,21 +55,6 @@ img.resize {
     margin-right: 100px;
     margin-bottom: 100px;
 }
-/*
-.gymlayout {
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-	width: 50%;
-}
-
-.preachercurl{
-	display: block;
-  margin-left: auto;
-  margin-right: auto;
-	width: 50%;
-
-}*/
 
 
 .modal {
@@ -92,6 +77,18 @@ img.resize {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+/*Button for startworkout and logout on homepage*/
+.Buttn{
+background-color: #3385ff; /*blue*/
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
 }
 
 .close {

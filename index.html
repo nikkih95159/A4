@@ -15,17 +15,37 @@
 		<div class="jumbotron jumbotron-fluid">
 			<h3 class="display-4">Welcome to Gym-Pal!</h3>
 			<p class="lead">We'll help build your workouts.</p>
+
+<!--create log in screen-->
+			<form name="login">
+				<div class="login">
+					<input type="text" placeholder="Username" id="loginid" required> <br>
+					<input type="text" placeholder="Password" id="loginpass" required> <br>
+					<br>
+					<input type="button" onclick="check(form)" value="Log In"/>
+				</div>
+			</form>
+
+			<br>
+<!-- create sign up page -->
+<button id="help" type="button">Sign Up</button>
+<div id="myModal" class="modal">
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<p>Create a New Account</p>
+		<h6>UserName</h6> <input type="text" placeholder="Enter UserName" id="signupid">
+		<br>
+		<h6>Password</h6>
+		<input type="text" placeholder="Enter Password" id="signuppass">
+		<input type="button" value="Sign Up" id="closesignup">
+	</div>
+</div>
+
 		</div>
 
-		<a href="pages/workoutbegin.html">
-			<button type="button" class="btn btn-info" disabled>Most Recent Workout</button>
-		</a>
-		<a href="pages/location.html">
-			<button type="button" class="btn btn-primary">Start!</button>
-		</a>
-		<hr>
-		<button id="help" type="button" class="btn btn-secondary">Help?</button>
+<hr>
 
+	<button id="help" type="button" class="btn btn-secondary">Help?</button>
 		<div id="myModal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>

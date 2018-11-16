@@ -16,18 +16,22 @@
         <div class="jumbotron">
             <h1>Muscle Groups Page!</h1>
             <h3>What muscle groups do you want to workout?</h3>
+						<h6>Select only up to 2 muscle groups</h6>
         </div>
         <div id="chosenLocation">
         </div>
-        <form>
+
+<!--use for id and name to write code in musclegroups function checkbox limit-->
+<!--NEWLY ADDED id and nam inside <form>-->
+        <form id="bodyparts" name ="muscle">
             <div class="images" style="display:flex">
                 <div class="images">
-                    <img src="../images/arms.jpg" alt="Arms image" class="resize"> 
+                    <img src="../images/arms.jpg" alt="Arms image" class="resize">
                     <hr>
-                    <input type="checkbox" name="muscle" value="arms"> Arms<br>    
+                    <input type="checkbox" name="muscle" value="arms"> Arms<br>
                 </div>
                 <div class="images">
-                    <img src="../images/leg.png" alt="Legs image" class="resize"> 
+                    <img src="../images/leg.png" alt="Legs image" class="resize">
                     <hr>
                     <input type="checkbox" name="muscle" value="Legs"> Legs<br>
                 </div>
@@ -37,20 +41,20 @@
                     <input type="checkbox" name="muscle" value="Abs"> Abs<br>
                 </div>
                 <div class="images">
-                    <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
-                    <hr>
-                    <input type="checkbox" name="muscle" value="shoulders"> Shoulders<br>
-                </div>
-                <dive class="images">
                     <img src="../images/back.jpg" alt="Back image" class="resize">
                     <hr>
                     <input type="checkbox" name="muscle" value="back"> Back<br>
-                </dive>
-                <div class="images">
+                </div>
+								<!--    <div class="images">
+		                    <img src="../images/shoulder.jpg" alt="Shoulders image" class="resize">
+		                    <hr>
+		                    <input type="checkbox" name="muscle" value="shoulders"> Shoulders<br>
+		                </div>
+               <div class="images">
                     <img src="../images/chest.png" alt="Chest image" class="resize">
                     <hr>
                     <input type="checkbox" name="muscle" value="chest"> Chest<br>
-                </div>
+                </div>-->
             </div>
         </form>
 
@@ -73,10 +77,9 @@
 		<div id="myModal" class="modal">
 			<div class="modal-content">
 				<span class="close">&times;</span>
-				<p>Feel free to pick only one body part to focus on or as many as you want!</p>
+				<p>Please pick up to 2 body parts only!</p>
 			</div>
 		</div>
-    
     </div>
 
   <!-- include JavaScript near the end of the HTML file -->
