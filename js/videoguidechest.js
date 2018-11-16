@@ -5,9 +5,10 @@ $(document).ready(function() {
 
 function initializePage() {
 
-    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("selectedTime")/2 + " minutes</h5>";
+    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
 
 	if (localStorage.firstExercise === "true") {
+        localStorage.chest = "false";
 		localStorage.firstExercise = "false";
 		if (localStorage.selectedShoulders != null) {
 			document.getElementById("nextWorkout").innerHTML = "<a href='videoguideshoulders.html'>" + 
@@ -37,12 +38,34 @@ function initializePage() {
 			document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
 			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
 			return;
-		}
+        }
+        //if they only click one muscle
+        document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
+        "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
+        return;
 	}
 	else {
 		document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
         "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
         localStorage.firstExercise = true;
 	}
+}
+
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+ 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
 }
 

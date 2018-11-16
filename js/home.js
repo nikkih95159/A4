@@ -71,9 +71,12 @@ function check(form){
 	var uname = document.getElementById("loginid").value
 	var pass = document.getElementById("loginpass").value
 
+	if (newid=="" && newpass=="") {
+		alert("Please make an account using the sign up button!");
+	}
 
 	//if uname & pass is equal to the username and password from sign up then direct to next page
-	if(uname == newid && pass == newpass){
+	else if(uname == newid && pass == newpass){
 		window.location.href = "../A4/pages/homepage.html";
 		console.log("your username is " + uname + " and your password is " + pass);
 	}

@@ -5,36 +5,33 @@ $(document).ready(function() {
 
 function initializePage() {
 
-    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
+    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("selectedTime") + " minutes</h5>";
 
-    if (localStorage.firstExercise === "true") {
-        localStorage.abs = "false";
-        localStorage.firstExercise = "false";
-        if (localStorage.selectedArms != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
+        if (localStorage.selectedAbs != null && localStorage.abs === "abs") {
+            document.getElementById("nextWorkout").innerHTML = "<a href='videoguideabs.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
-        if (localStorage.selectedShoulders != null) {
+        if (localStorage.selectedShoulders != null && localStorage.shoulders === "shoulders") {
             document.getElementById("nextWorkout").innerHTML = "<a href='videoguideshoulders.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
-        if (localStorage.selectedLegs != null) {
+        if (localStorage.selectedLegs != null && localStorage.legs === "legs") {
             document.getElementById("nextWorkout").innerHTML = "<a href='videoguidelegs.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
-        if (localStorage.selectedBack != null) {
+        if (localStorage.selectedBack != null && localStorage.back ==="back") {
             document.getElementById("nextWorkout").innerHTML = "<a href='videoguideback.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
-        if (localStorage.selectedChest != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidechest.html'>" + 
+        if (localStorage.selectedArms != null && localStorage.arms === "arms") {
+            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
@@ -42,11 +39,6 @@ function initializePage() {
         document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
         "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
         return;
-    }
-    else {
-        document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
-        "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
-        localStorage.firstExercise = "0";
-    }
+
 }
 
