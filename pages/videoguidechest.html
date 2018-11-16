@@ -12,53 +12,63 @@
 
 </head>
 
-<body>
+<body background="../images/Sports.png">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+		<a class="navbar-brand">Workout Builder</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-item nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="index.html">Login</a>
+		  </div>
+		</div>
+	</nav>
     <div class="container">
 
         <div class="jumbotron">
+			<h1>Chest Workout</h1>
+			<h3>Bench Press</h3>
+			<div id="duration"></div>
 
-						<h1>Chest Workout</h1>
-						<h3>Bench Press</h3>
-						<h5>(Duration: -- min)</h5>
+			<!--gif of workout-->
+			<img class="videoguideimages" src="../images/benchpress.gif" alt="bench press">
 
-						<!--gif of workout-->
-						<img class="videoguideimages" src="../images/benchpress.gif" alt="bench press">
-
-						<!--Description/Facts-->
-						<h5>Bench presses help build up your chest!</h5>
-						 <h6>For an effective workout, make sure to:
-						<ul>
-							<li>Sit so that the pad is slanted away from you.</li>
-							<li>Put your upper arms in front of the pad and your chest against the back.</li>
-							<li>Firmly grip the barbell and slowly bring it towards you.</li>
-							<li>Don't bend your wrists and make sure to use manageable weights.</li>
-						</ul>
-					</h6>
+			<!--Description/Facts-->
+			<h5>Bench presses help build up your chest!</h5>
+				<h6>For an effective workout, make sure to:</h6>
+			<ul>
+				<li>Sit so that the pad is slanted away from you.</li>
+				<li>Put your upper arms in front of the pad and your chest against the back.</li>
+				<li>Firmly grip the barbell and slowly bring it towards you.</li>
+				<li>Don't bend your wrists and make sure to use manageable weights.</li>
+			</ul>
+			<h6>Don't have this machine at your gym?</h6>
+			<a href="#">Use an alternative exercise.</a>
         </div>
 
-        <div class="project">
-<!--buttons on the right side of the page-->
-					<div id="right">
-						<a href="videoguide2.html">
-		            <h4>Next</h4>
-							</a>
-            <a href="gymlayout.html">
-                <button>Lost?</button>
-							</a>
-					</div>
-<!--buttons on the left side of the page-->
-					<div id="left">
-						<form>
-							<input type="button" value="Back" onclick="history.back()">
-						</form>
-					</div>
-        </div>
+       
+		<div class="project">
+			<div id="nextWorkout"></div>
+			<div id="finishedWorkout"></div>
+			<a href="#">
+				<button type="button" class="btn btn-info" onclick="history.back()">Back</button>
+			</a>
+			<!-- <a href="videoguideabs.html">
+				<button type="button" style="float: right;" class="btn btn-primary">Next</button>
+			</a> -->
+			<hr>
+		</div>
+
+		<div class="project">
+			<a href="gymlayout.html">
+                <button class="btn btn-dark" type="button">Lost?</button>
+			</a>
+		</div>
 
     </div>
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- <script src="js/home.js"></script> -->
+	<script src="../js/videoguidechest.js"></script>
 </body>
 </html>

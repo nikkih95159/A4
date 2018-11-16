@@ -8,12 +8,14 @@ function toggle() {
     document.getElementById("next").disabled = false;
 }
 
+$(":checkbox[name='muscle']").change(function(){
+	if ($(":checkbox[name='muscle']:checked").length == 2)                                              
+	 $(':checkbox:not(:checked)').prop('disabled', true);  
+	else                                                     
+	 $(':checkbox:not(:checked)').prop('disabled', false); 
+  });
+
 function initializePage() {
-	// if (localStorage.location) 
-	// 	document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6>Location: " + 
-	// 	localStorage.getItem("location") + "</h6></div>";
-	// else 
-	// 	document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
 }
 
 var modal = document.getElementById('myModal');
