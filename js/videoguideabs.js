@@ -41,6 +41,7 @@ function initializePage() {
     else {
         document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
         "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
+        localStorage.firstExercise = true;
     }
 }
 
