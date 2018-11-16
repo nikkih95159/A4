@@ -25,31 +25,46 @@
 		<div class="jumbotron jumbotron-fluid">
 			<h3 class="display-4">Welcome to Workout Builder!</h3>
 			<p class="lead">We'll help build your workouts.</p>
-
-			<!--implement log in screen features-->
-			<form>
-				<div class="form-group">
-					<h5 class="lead">Username: </h5>
-						<input type="username" id="username" name="username" placeholder="Username"> <br>
-					<h5 class="lead">Password: </h5>
-						<input type="password" id="userPassword" name="password" placeholder="Password"> <br>
-					<input type="checkbox" checked="checked" name="rememberme"> Remember me
+			<br>
+			<p>Please sign-up if you have not created an account! Or login if you have already.</p>
+<!--create log in screen-->
+			<form name="login">
+				<div class="login">
+					<input type="text" placeholder="Username" id="loginid" required> <br>
+					<input type="text" placeholder="Password" id="loginpass" required> <br>
+					<br>
+					<button type="button" class="btn btn-primary" onclick="check(form)">Login</button>
 				</div>
 			</form>
+
+			<br>
+<!-- create sign up page -->
+	<button id="help" class="btn btn-outline-primary" type="button">Sign Up</button>
+	<div id="myModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Create a New Account</p>
+			<h6>UserName</h6> <input type="text" class="form-control" placeholder="Enter Username" id="signupid">
+			<br>
+			<h6>Password</h6>
+			<input type="text" class="form-control" placeholder="Enter Password" id="signuppass">
+			<br>
+			<input type="button" class="btn btn-outline-primary" value="Sign Up" id="closesignup">
+		</div>
+	</div>
+
 		</div>
 
-		<!-- <a href="pages/workoutbegin.html">
-			<button type="button" class="btn btn-info" disabled>Most Recent Workout</button>
-		</a> -->
-		<div id="mostRecent"></div>
-		<a href="pages/location.html">
-			<button type="button" class="btn btn-primary" >Start!</button>
-		</a>
-		<button type="button" class="btn btn-outline-warning" style="float: right;" onclick="clearHistory()">Clear Workout History</button>
-		<!-- <div id="mostRecent"></div> -->
-		<hr>
+<hr>
+<!-- 
+	<button id="help" type="button" class="btn btn-secondary">Help?</button>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>Customize your own workout to cater to your schedule and health!</p>
+			</div>
+		</div> -->
 
-	</div>
 
   	<!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>

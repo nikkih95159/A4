@@ -48,6 +48,7 @@ img.resize {
     margin-right: 100px;
     margin-bottom: 100px;
 }
+<<<<<<< HEAD
 #right{
 	float: right;
 }
@@ -70,6 +71,8 @@ img.resize {
 	width: 50%;
 
 }*/
+=======
+>>>>>>> 954b02f5f3ac17d37fe0a03f21c92d412f6385af
 
 
 .modal {
@@ -92,6 +95,18 @@ img.resize {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+}
+
+/*Button for startworkout and logout on homepage*/
+.Buttn{
+background-color: #3385ff; /*blue*/
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
 }
 
 .close {
