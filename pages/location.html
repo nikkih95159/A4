@@ -5,7 +5,7 @@
 	<title>Location</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/location.css" rel="stylesheet">
 
 </head>
@@ -22,8 +22,8 @@
 	</nav>
       <div class="container">
         <div class="jumbotron">
-            <h3 class="display-4">What gym do you want to go to?</h3>
-            <h6>Please select a location before clicking next!</h6>
+            <h1>What gym do you want to go to?</h1>
+            <h4 class="text-muted">Please select a location before clicking next!</h4>
         </div>
 
         <!-- <div class="container">
@@ -56,7 +56,8 @@
                         <input type="checkbox" name="gym" value="Main Gym" id="main" onclick="toggle()"> Main Gym<br>
                         <input type="checkbox" name="gym" value="Crossroads" id="crossroads" onclick="toggle()"> La Jolla Crossroads<br>
                     </form> -->
-                    <select id="gymSelect" class="custom-select" onclick="toggle()" onchange="show(this)">
+                    <!-- <select id="gymSelect" class="custom-select" onclick="toggle()" onchange="show(this)"> -->
+                    <select id="gymSelect" class="custom-select" onclick="show(this)">
                             <option selected>Select a gym</option>
                             <option name="gym" value="La Regencia" id="regencia">La Regencia</option>
                             <option name="gym" value="Costa Verde" id="costaverde">Costa Verde</option>

@@ -1,7 +1,10 @@
 // Call this function when the page loads (the jQuery "ready" event)
 $(document).ready(function() {
-    document.getElementById("next").disabled = true;
-	initializePage();
+    // if (localStorage.selectedTime != null)
+      // document.getElementById("next").disabled = false;
+    // else
+      document.getElementById("next").disabled = true;
+    initializePage();
 })
 
 function toggle() {
@@ -12,11 +15,6 @@ function toggle() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	if (localStorage.location) 
-        document.getElementById("chosenLocation").innerHTML = "<div class='container'><h6>Location: " + 
-        localStorage.getItem("location") +"</h6></div>";
-	else 
-		document.getElementById("chosenLocation").innerHTML = "You have not chosen a gym location.";
 }
 
 var modal = document.getElementById('myModal');

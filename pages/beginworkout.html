@@ -1,5 +1,5 @@
 <!doctype html>
-<!--created a 2nd videoguide page that shows the next workout after the first one-->
+
 <html>
 <head>
 	<title>Video Guide</title>
@@ -8,7 +8,7 @@
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
 	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../css/home.css" rel="stylesheet">
-  <link href="../css/videoguide.css" rel="stylesheet">
+	<link href="../css/videoguide.css" rel="stylesheet">
 
 </head>
 
@@ -26,25 +26,12 @@
 
         <div class="jumbotron">
 
-					<h1>Shoulder Workout</h1>
-					<h3>Arnold Press</h3>
-					<div id="duration"></div>
-
-					<!--gif of workout-->
-					<img class="videoguideimages" src="../images/arnoldpress.gif" alt="arnold press">
-
-					<!--Description/Facts-->
-					<h5>Arnold Press helps to strengthen your shoulders!</h5>
-					<h6>For an effective workout, make sure to:</h6>
-					<ul>
-						<li>Stand straight up with legs spread at shoulder length.</li>
-						<li>Hold the dumbbells in front of you at chest height and palms facing your chest.</li>
-						<li>Slowly lift the dumbbells up above your head while moving your wrists so that your palms now face away from your body.</li>
-						<li>Remember to keep your back straight and to not swing the weight around.</li>
-					</ul>
-					<h6>Don't have weights at your gym?</h6>
-					<a href="shouldersalternative.html">Use an alternative exercise.</a>
-        </div>
+			<div id="armWorkout"></div>
+			<div id="absWorkout"></div>
+			<div id="backWorkout"></div>
+			<div id="chestWorkout"></div>
+			<div id="shouldersWorkout"></div>
+			<div id="legsWorkout"></div>
 
 		<div class="project">
 			<div id="nextWorkout"></div>
@@ -58,11 +45,6 @@
 			<hr>
 		</div>
 
-		<!-- <div class="project">
-			<a href="gymlayout.html">
-                <button class="btn btn-dark" type="button">Gym Map</button>
-			</a>
-		</div> -->
 		<button id="myBtn" class="btn btn-dark">Gym Map</button>
 		<div id="myModal" class="modal">
 			<div class="modal-content">
@@ -72,11 +54,11 @@
 			</div>
 		</div>
 
-	</div>
+    </div>
 
   <!-- include JavaScript near the end of the HTML file -->
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="../js/videoguideshoulders.js"></script>
+	<script src="../js/beginworkout.js"></script>
 </body>
 </html>

@@ -41,32 +41,38 @@ function outputWorkout() {
 
 	// display times for muscles
 	if (localStorage.selectedArms != null) {
-		document.getElementById("overviewArms").innerHTML = "<h5>Arms: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/arms.jpg' alt='Arms image' class='resize'>";
+		document.getElementById("overviewArms").innerHTML = "<div class='col'><h5>Arms: </h5><p>Preacher curls for " + localStorage.getItem("dividedTime") + 
+		" minutes</p><img src='../images/arms.jpg' alt='Arms image' class='resize'></div></div>";
 		localStorage.setItem("arms", "arms");
 	}
 
 	if (localStorage.selectedShoulders != null) {
-		document.getElementById("overviewShoulders").innerHTML = "<h5>Shoulders: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/shoulder.jpg' alt='Shoulders image' class='resize'>";
+		document.getElementById("overviewShoulders").innerHTML = "<div class='col'><h5>Shoulders: </h5><p>Arnorld press for " + localStorage.getItem("dividedTime") +
+		 " minutes</p><img src='../images/shoulder.jpg' alt='Shoulders image' class='resize'></div></div>";
 		localStorage.setItem("shoulders", "shoulders");
 	}
 
 	if (localStorage.selectedLegs != null) {
-		document.getElementById("overviewLegs").innerHTML = "<h5>Legs: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/leg.png' alt='Legs image' class='resize'>";
+		document.getElementById("overviewLegs").innerHTML = "<div class='col'><h5>Legs: </h5><p>High knees for " + localStorage.getItem("dividedTime") + 
+		" minutes</p><img src='../images/leg.png' alt='Legs image' class='resize'></div></div>";
 		localStorage.setItem("legs", "legs");
 	}
 
 	if (localStorage.selectedBack != null) {
-		document.getElementById("overviewBack").innerHTML = "<h5>Back: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/back.jpg' alt='Back image' class='resize'>";
+		document.getElementById("overviewBack").innerHTML = "<div class='col'><h5>Back: </h5><p>Seated rows for " + localStorage.getItem("dividedTime") + 
+		" minutes</p><img src='../images/back.jpg' alt='Back image' class='resize'></div></div>";
 		localStorage.setItem("back", "back");
 	}
 
 	if (localStorage.selectedAbs != null) {
-		document.getElementById("overviewAbs").innerHTML = "<h5>Abs: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/abs.png' alt='Abs image' class='resize'>";
+		document.getElementById("overviewAbs").innerHTML = "<div class='col'><h5>Abs: </h5><p>Plank for " + localStorage.getItem("dividedTime") + 
+		" minutes</p><img src='../images/abs.png' alt='Abs image' class='resize'></div></div>";
 		localStorage.setItem("abs", "abs");
 	}
 
 	if (localStorage.selectedChest != null) {
-		document.getElementById("overviewChest").innerHTML = "<h5>Chest: </h5><p>for " + localStorage.getItem("dividedTime") + " minutes</p><img src='../images/chest.png' alt='Chest image' class='resize'>";
+		document.getElementById("overviewChest").innerHTML = "<div class='col'><h5>Chest: </h5><p>Bench presses for " + localStorage.getItem("dividedTime") + 
+		" minutes</p><img src='../images/chest.png' alt='Chest image' class='resize'></div></div>";
 		localStorage.setItem("chest", "chest");
 	}
 

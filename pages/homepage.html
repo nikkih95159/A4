@@ -25,7 +25,7 @@
 		<div class="container">
 			<div class="jumbotron jumbotron-fluid">
 				<h3 class="display-4">Welcome!</h3>
-				<p class="lead">Let's get started!</p>
+				<h5>Click start to begin building your workout! <br>Or click on the most recent workout button to go to your recent workout!</h5>
 			</div>
 		
 
@@ -33,15 +33,24 @@
 				<button type="button" class="btn btn-info" disabled>Most Recent Workout</button>
 			</a> -->
 			
-			<a href="location.html">
-				<button type="button" class="btn btn-primary" >Start!</button>
-			</a>
-			<button type="button" class="btn btn-outline-dark" style="float: right;" onclick="clearHistory()">Clear Workout History</button>
-			<div id="mostRecent"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+							<a href="location.html">
+								<button type="button" class="btn btn-primary">Start!</button>
+							</a>
+					</div>
+					<div class="col-md-auto">
+						<div id="mostRecent"></div>
+					</div>
+					<div class="col col-lg-2">
+						<button type="button" class="btn btn-outline-dark" onclick="clearHistory()">Clear Workout History</button>
+					</div>
+				</div>
 			<hr>
 
 			<!--LogOut button on homepage-->
-				<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<!--HTML-->
 			<body>
 			<!-- Log Out Modal -->

@@ -1,19 +1,41 @@
 // Call this function when the page loads (the jQuery "ready" event)
 $(document).ready(function() {
+	if ($(":checkbox[name='muscle']:checked").length >= 1)
+		document.getElementById("next").disabled = false;
+	else
 	document.getElementById("next").disabled = true;
-	initializePage();
 })
 
 function toggle() {
-    document.getElementById("next").disabled = false;
+	if ($(":checkbox[name='muscle']:checked").length >= 1)
+		document.getElementById("next").disabled = false;
+	else 
+		document.getElementById("next").disabled = true;
 }
 
 $(":checkbox[name='muscle']").change(function(){
-	if ($(":checkbox[name='muscle']:checked").length == 2)                                              
-	 $(':checkbox:not(:checked)').prop('disabled', true);  
-	else                                                     
-	 $(':checkbox:not(:checked)').prop('disabled', false); 
-  });
+	if ($(":checkbox[name='muscle']:checked").length == 2) {                                              
+	 $(':checkbox:not(:checked)').prop('disabled', true); 
+	}
+	else {                                                     
+	 $(':checkbox:not(:checked)').prop('disabled', false);
+	}
+});
+
+$('img').click(function(){
+	if ($(":checkbox[name='muscle']:checked").length == 2) {
+		if ($(this).hasClass('selected'))
+			$(this).removeClass('selected');
+		else 
+			alert("You can only select two muscles!"); 
+	}
+	else {  
+		if ($(this).hasClass('selected'))
+			$(this).removeClass('selected');
+		else
+			$(this).addClass('selected'); 
+	}
+});
 
 function initializePage() {
 }

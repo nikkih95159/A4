@@ -6,7 +6,6 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
 	<link href="../css/musclegroups.css" rel="stylesheet">
 
 </head>
@@ -21,29 +20,17 @@
 		  </div>
 		</div>
 	</nav>
-    <div class="container-fluid">
+    <div class="container">
 
         <div class="jumbotron">
-            <h3 class="display-4">How long do you want to workout for?</h3>
-            <h6>Select a time before clicking next!</h6>
+            <h1>How long do you want to workout for?</h1>
+            <h4 class="text-muted">Select a time before clicking next!</h4>
         </div>
-        <!-- <div id="chosenLocation"></div> -->
+
         <div class="container">
             <div class="row">
                 <div class="form-check">
-                    <!-- <form action="">
-                        <input type="checkbox" id="15" name="time" value="15" onclick="toggle()"> 15 minutes<br>
-                        <input type="checkbox" id="30" name="time" value="30" onclick="toggle()"> 30 minutes<br>
-                        <input type="checkbox" id="45" name="time" value="45" onclick="toggle()"> 45 minutes<br>
-                        <input type="checkbox" id="60" name="time" value="60" onclick="toggle()"> 1 hour<br>
-                        <input type="checkbox" id="75" name="time" value="75" onclick="toggle()"> 1 hour and 15 minutes<br>
-                        <input type="checkbox" id="90" name="time" value="90" onclick="toggle()"> 1 hour and 30 minutes<br>
-                        <input type="checkbox" id="105" name="time" value="105" onclick="toggle()"> 1 hour and 45 minutes<br>
-                        <input type="checkbox" id="120" name="time" value="120" onclick="toggle()"> 2 hours<br>
-                        <input type="time" id="custom" placeholder="Custom Time">
-                    </form> -->
                     <div class="dropdown">
-                        <div class="container">
                         <select id="timeSelect" class="custom-select" onclick="toggle()">
                             <option selected>Select a time</option>
                             <option id="30" name="time" value="30">30 minutes</option>
@@ -51,11 +38,8 @@
                             <option id="90" name="time" value="90">1 hour and 30 minutes</option>
                             <option id="120" name="time" value="120">2 hours</option>
                         </select>
-                        </div>
                     </div>
-                    <p></p>
-                    <!-- <button class="btn btn-outline-dark btn-sm" type="reset" value="Reset" onclick="reset()">Reset</button> -->
-                    <!-- <p></p> -->
+                        <p></p>
                 </div>
             </div>
         </div>
@@ -71,14 +55,14 @@
         </div>
 
         <div class="container">
-                <button type="button" id="help" class="btn btn-secondary">Help?</button>
+                <button type="button" class="btn btn-secondary" id="help">Help?</button>
+        </div>
             <div id="myModal" class="modal">
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <p>Click the dropdown button to select from a list of common time frames. Then click next once you're satisfied.</p>
                 </div>
             </div>
-        </div>
 
     </div>
 
