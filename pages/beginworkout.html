@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Video Guide</title>
+	<title>Begin Workout</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -24,35 +24,32 @@
 	</nav>
     <div class="container">
 
-        <div class="jumbotron">
+				<div id="armWorkout"></div>
+				<div id="absWorkout"></div>
+				<div id="backWorkout"></div>
+				<div id="chestWorkout"></div>
+				<div id="shouldersWorkout"></div>
+				<div id="legsWorkout"></div>
 
-			<div id="armWorkout"></div>
-			<div id="absWorkout"></div>
-			<div id="backWorkout"></div>
-			<div id="chestWorkout"></div>
-			<div id="shouldersWorkout"></div>
-			<div id="legsWorkout"></div>
+			<div class="project">
 
-		<div class="project">
-			<div id="nextWorkout"></div>
-			<div id="finishedWorkout"></div>
-			<a href="#">
-				<button type="button" class="btn btn-info" onclick="history.back()">Back</button>
-			</a>
-			<!-- <a href="videoguideabs.html">
-				<button type="button" style="float: right;" class="btn btn-primary">Next</button>
-			</a> -->
-			<hr>
-		</div>
-
-		<button id="myBtn" class="btn btn-dark">Gym Map</button>
-		<div id="myModal" class="modal">
-			<div class="modal-content">
-				<span class="close">&times;</span>
-				<p>A map/layout of the selected gym:</p>
-				<img class="gymlayout" src="../images/gymLayout.jpg" alt="Gym Layout" style="width: 50%; height: 50%;">
+				<a href="overview.html">
+					<button type="button" class="btn btn-info">Back</button>
+				</a>
+				<a href="lastpage.html"> 
+					<button type="button" style="float: right;" class="btn btn-outline-success">Finished!</button>
+				</a>
+				<hr>
 			</div>
-		</div>
+
+			<button id="myBtn" class="btn btn-dark">Gym Map</button>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<p>A map/layout of the selected gym:</p>
+					<img class="gymlayout" src="../images/gymLayout.jpg" alt="Gym Layout" style="width: 50%; height: 50%;">
+				</div>
+			</div>
 
     </div>
 

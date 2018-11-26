@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function initializePage() {
 
-    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("selectedTime") + " minutes</h5>";
+    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
 
         if (localStorage.selectedAbs != null && localStorage.abs === "abs") {
             document.getElementById("nextWorkout").innerHTML = "<a href='videoguideabs.html'>" + 
