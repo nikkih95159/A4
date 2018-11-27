@@ -5,12 +5,9 @@ $(document).ready(function() {
 
 function initializePage() {
 
-    if (localStorage.dividedTime != null) {
-		document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
-	}
-	else {
-		document.getElementById("duration").innerHTML = "<h5>Duration: 30 minutes</h5>";
-	}
+	// document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
+	document.getElementById("duration").innerHTML = "<h5>Duration: 30 minutes</h5>";
+
 
 	if (localStorage.firstExercise === "true") {
         localStorage.firstExercise = "false";
