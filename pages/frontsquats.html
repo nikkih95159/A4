@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Video Guide</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="../css/home.css" rel="stylesheet">
+	<link href="../css/videoguide.css" rel="stylesheet">
+
+</head>
+
+<body background="../images/Sports.png">
+	<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+		<a class="navbar-brand">Workout Builder</a>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <div class="navbar-nav">
+			<a class="nav-item nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+			<a class="nav-item nav-link" href="../index.html">Login</a>
+		  </div>
+		</div>
+	</nav>
+    <div class="container">
+        <div class="jumbotron">
+			<h1>Leg workout</h1>
+			<h3>Front squats</h3>
+			<div id="duration"></div>
+
+			<!--gif of workout-->
+			<img class="videoguideimages" src="../images/frontsquat.gif" alt="Front squats">
+
+			<!--Description/Facts-->
+			<h5>Front squats are great for building up your legs.</h5>
+				<h6>For an effective workout, make sure to:</h6>
+			<ul>
+				<li>Stand up straight with your feet a little past shoulder length.</li>
+				<li>Place the barbell resting on two fingers or more of both of your hands.</li>
+        <li>Rest the barbell at around collarbone level using your fingers to hold it level.</li>
+				<li>Slowly bring yourself down with your weight driven in your heels.</li>
+				<li>Make sure to go parallel to the ground or lower than parallel.</li>
+        <li>Make sure to use suitable weights.</li>
+			</ul>
+		<br>
+        </div>
+
+		<div class="project">
+			<div id="nextWorkout"></div>
+			<div id="finishedWorkout"></div>
+			<a href="#">
+				<button type="button" class="btn btn-info" onclick="history.back()">Back</button>
+			</a>
+			<!-- <a href="videoguideabs.html">
+				<button type="button" style="float: right;" class="btn btn-primary">Next</button>
+			</a> -->
+			<hr>
+		</div>
+
+		<!-- <div class="project">
+			<a href="gymlayout.html">
+                <button class="btn btn-dark" type="button">Gym Map</button>
+			</a>
+		</div> -->
+
+		<button id="myBtn" class="btn btn-dark">Gym Map</button>
+		<div id="myModal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p>A map/layout of the selected gym:</p>
+				<img class="gymlayout" src="../images/gymLayout.jpg" alt="Gym Layout" style="width: 50%; height: 50%;">
+			</div>
+		</div>
+
+
+    </div>
+
+  <!-- include JavaScript near the end of the HTML file -->
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="../js/videoguidearms.js"></script>
+</body>
+</html>
