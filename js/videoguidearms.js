@@ -5,8 +5,16 @@ $(document).ready(function() {
 
 function initializePage() {
 
-	document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
+	if (localStorage.dividedTime != null) {
+		document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
+	}
+	else {
+		document.getElementById("duration").innerHTML = "<h5>Duration: 30 minutes</h5>";
+	}
 
+
+	//temporary for redesign ****
+	localStorage.firstExercise = "false";
 	if (localStorage.firstExercise === "true") {
 		localStorage.arms = "false";
 		localStorage.firstExercise = "false";
@@ -45,9 +53,13 @@ function initializePage() {
         return;
 	}
 	else {
-		document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
-		"<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
-		localStorage.firstExercise = true;
+		// document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
+		// "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
+		// localStorage.firstExercise = true;
+		document.getElementById("nextWorkout").innerHTML = "<a href='videoguideshoulders.html'>" + 
+		"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
+		return;
+		
 	}
 }
 
