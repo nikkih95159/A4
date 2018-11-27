@@ -119,6 +119,42 @@ function initializePage() {
 			"</div>";
 	}
 
+	if (localStorage.selectedAbs == null && localStorage.selectedArms == null && localStorage.selectedBack == null &&
+		localStorage.selectedChest == null && localStorage.selectedLegs == null && localStorage.selectedShoulders == null) {
+			document.getElementById("defaultWorkout").innerHTML = "<div class='jumbotron'>" +
+			"<h1>Arm Workout</h1>" + 
+			"<h3>Preacher Curl</h3>" +
+			"<h5>Duration: 30 minutes</h5>" + 
+			"<img class='videoguideimages' src='../images/pic1.gif' alt='Preacher Curl'>" +
+			"<h5>Preacher Curls help build up the lower part of your biceps!</h5>" +
+				"<h6>For an effective workout, make sure to:</h6>" +
+			"<ul>" +
+				"<li>Sit with your back straight.</li>" +
+				"<li>Put the barbell in your hands and rest your arms on the platform.</li>" +
+				"<li>Firmly grip the barbell and slowly bring it towards your shoulders.</li>" +
+				"<li>Don't bend your wrists and make sure to use manageable weights.</li>" + 
+			"</ul>" + 
+			"<br>" +
+			"<h6>Don't have this machine at your gym?</h6>" +
+			"<a href='armsalternative.html'>Use an alternative exercise.</a>"+
+			"</div>" + "<div class='jumbotron'>" +
+			"<h1>Shoulder Workout</h1>" +
+			"<h3>Arnold Press</h3>" +
+			"<h5>Duration: 30 minutes</h5>" +
+			"<img class='videoguideimages' src='../images/arnoldpress.gif' alt='arnold press'>" +
+			"<h5>Arnold Press helps to strengthen your shoulders!</h5>" +
+			"<h6>For an effective workout, make sure to:</h6>" +
+			"<ul>" +
+				"<li>Stand straight up with legs spread at shoulder length.</li>" +
+				"<li>Hold the dumbbells in front of you at chest height and palms facing your chest.</li>" +
+				"<li>Slowly lift the dumbbells up above your head while moving your wrists so that your palms now face away from your body.</li>" +
+				"<li>Remember to keep your back straight and to not swing the weight around.</li>" +
+			"</ul>" +
+			"<h6>Don't have weights at your gym?</h6>" +
+			"<a href='shouldersalternative.html'>Use an alternative exercise.</a>" +
+			"</div>";
+		}
+
 }
 
 var modal = document.getElementById('myModal');
