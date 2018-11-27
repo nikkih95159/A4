@@ -54,7 +54,7 @@ img.resize {
 
 #left{
 	float: left;
-} 
+}
 /*
 .gymlayout {
 	display: block;
@@ -159,3 +159,17 @@ html, body, #map-canvas {
     font-size: 13px;
     font-weight: 300;
   }
+
+	/*Change color for "congratualtions" on last page*/
+		@-webkit-keyframes Font {
+		    0% {color: crimson;}
+		    20% {color: orange;}
+		    40% {color: goldenrod;}
+		    60% {color: green;}
+		    80% {color: DarkBlue;}
+		    100% {color: purple}
+		}
+
+		#congrats{
+			-webkit-animation:Font 5s infinite alternate;
+		}

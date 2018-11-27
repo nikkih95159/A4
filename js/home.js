@@ -9,11 +9,11 @@ $(document).ready(function() {
  */
 function initializePage() {
 	if (localStorage.mostRecentWorkout === "true") {
-		document.getElementById("mostRecent").innerHTML = "<a href='overview.html'>" + 
+		document.getElementById("mostRecent").innerHTML = "<a href='overview.html'>" +
 		"<button type='button' class='btn btn-info'>Most Recent Workout</button></a>";
 	}
 	else {
-		document.getElementById("mostRecent").innerHTML = "<a href='overview.html'>" + 
+		document.getElementById("mostRecent").innerHTML = "<a href='overview.html'>" +
 		"<button type='button' class='btn btn-info' disabled>Most Recent Workout</button></a>";
 	}
 }
@@ -23,12 +23,6 @@ function clearHistory() {
 	initializePage();
 }
 
-// function signup() {
-//
-// 	var signupModal = document.getElementById("myModal");
-// 	signupModal.style.display = "none";
-//
-// }
 
 var modal = document.getElementById('myModal');
 
@@ -48,11 +42,6 @@ span.onclick = function() {
 	modal.style.display = "none";
 }
 
-//when user clicks signup inside modal return to login page
-closesignup.onclick =function(){
-	modal.style.display = "none";
-}
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
 	if (event.target == modal) {
@@ -61,33 +50,50 @@ window.onclick = function(event) {
 }
 
 
-//function to username and password while logging in
-function check(form){
-	//variables to get value of sign up username and password
-	var newid= document.getElementById("signupid").value
-	var newpass = document.getElementById("signuppass").value
+/*CODE FOR SIGN UP AND LOG IN*/
+//store sign-up info into variable
+var newid = document.getElementById("signupid");
+var newpass = document.getElementById("signuppass");
 
-	//variable to get value of login username and password
-	var uname = document.getElementById("loginid").value
-	var pass = document.getElementById("loginpass").value
+// store value of sign-up variable into localStorage
+function store() {
 
-	if (newid=="" && newpass=="") {
-		alert("Please make an account using the sign up button!");
-	}
+	if(newid.value== "" && newpass.value== ""){
+		alert("Please Enter a Username and Password");
+	 }
 
-	//if uname & pass is equal to the username and password from sign up then direct to next page
-	else if(uname == newid && pass == newpass){
-		window.location.href = "../A4/pages/homepage.html";
-		console.log("your username is " + uname + " and your password is " + pass);
-	}
-
-	//if uname and pass is blank let them know
-	else if(uname == "" && pass ==""){
-		alert("Username and Password is blank");
-	}
-
-	//if username and password is wrong notify
 	else{
-		alert("Incorrect Username or Password");
+    localStorage.setItem('username', newid.value);
+    localStorage.setItem('userpw', newpass.value);
 	}
 }
+
+// check if stored value from sign-up form is equal to value of log-in form
+function check() {
+
+    // get sign-up value from localStorage
+    var storedName = localStorage.getItem('username');
+    var storedPw = localStorage.getItem('userpw');
+
+    // store log-in value into variable
+    var logid = document.getElementById('loginid').value;
+    var logpass = document.getElementById('loginpass').value;
+
+		//if loginid is equal to signupid in localStorage and logpass is equal to signuppass open next page
+    if (logid==storedName && logpass==storedPw){
+			//window.open directs user to next page by opening up a new tab
+      window.open('../A4/pages/homepage.html');
+			//window.location.href directs user to next page without opening a new tab
+      //window.location.href = '../A4/pages/homepage.html';
+    }
+
+		// if logid and logpass is blank notify
+		else if (logid=="" && logpass==""){
+			alert("Username and Password is blank");
+		}
+
+		//if logid and logpass do not match notify
+		else{
+			alert("Wrong Username and Password");
+		}
+	}
