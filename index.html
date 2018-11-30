@@ -23,42 +23,70 @@
 
 	<div class="container">
 		<div class="jumbotron jumbotron-fluid">
-			<h3 class="display-4">Welcome to Workout Builder!</h3>
+			<!-- <h3 class="display-4">Welcome to Workout Builder!</h3> -->
+			<h1>Welcome to Workout Builder!</h1>
 			<p class="lead">We'll help build your workouts.</p>
 			<br>
 
 			<!--LOG IN-->
-			<div>
-				<form>
-			      <input id="loginid" type="text" placeholder="Enter Username" value=""/>
-						<br>
-			      <input id="loginpass" type="password" placeholder="Enter Password" value=""/>
-						<br>
-						<br>
-			      <input class="btn btn-primary" type="submit" value="Login" onClick="check()"/>
-			 </form>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+				<!-- <form> -->
+					<div class="form-group">
+						<label for="loginid">Username</label>
+			      <input id="loginid" type="text" class="form-control" placeholder="Enter Username" value=""/>
+					</div>	
+						<!-- <br> -->
+					<div class="form-group">
+						<label for="loginpass">Password</label>
+			      <input id="loginpass" type="password" class="form-control" placeholder="Enter Password" value=""/>
+					</div>
+						<!-- <br> -->
+						<!-- <br> -->
+					<div class="form-group">
+						<!-- <input class="btn btn-primary" type="submit" value="Login" onClick="check()"/> -->
+						<!-- <a href="./pages/homepage.html"> -->
+			      <button class="btn btn-primary" type="submit" value="Login" onClick="check()">Login</button>
+					<!-- </a> -->
+						<!-- </form> -->
+					</div>
+				</div>
+				</div>
 			</div>
 
 			<hr>
 
-			<p> Don't have an account? Sign Up now!</p>
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<p> Don't have an account? Sign Up now!</p>
+							<button id="help" class="btn btn-outline-primary">Sign Up</button>
+						</div>
+					</div>
+				</div>
 
 			<!--SIGN UP-->
-				<button id="help" class="btn btn-outline-primary">Sign Up</button>
 				<div id="myModal" class="modal">
 					<div class="modal-content">
 						<span class="close">&times;</span>
-						<p>Create a New Account</p>
-						<form>
-						<p> Enter a Username:</p>
-			      <input class="form-control" id="signupid" type="text" placeholder="Username" value=""/>
-						<br>
-						<p> Enter a Password:</p>
-			      <input class="form-control" id="signuppass" type="text" placeholder="Password" value=""/>
-						<br>
-						<p> You're all done just click on Sign Up!</p>
-			      <input class="btn btn-outline-primary" type="submit" value="Sign Up" onClick="store()"/>
-			  </form>
+						<h5>Create a New Account</h5>
+						<!-- <form> -->
+						<div class="form-group">
+							<label for="signupid">Enter a Username:</label>
+			      	<input class="form-control" id="signupid" type="text" placeholder="Username" value=""/>
+						</div>
+						<!-- <br> -->
+						<div class="form-group">
+							<label for="signuppass"> Enter a Password:</label>
+			      	<input class="form-control" id="signuppass" type="password" placeholder="Password" value=""/>
+						</div>
+						<!-- <br> -->
+						<!-- <a href="./pages/homepage.html"> -->
+			      	<!-- <input class="btn btn-outline-primary" type="submit" value="Sign Up" onClick="store()"/> -->
+			      	<button class="btn btn-outline-primary" type="submit" value="Sign Up" onClick="store()">Sign Up</button>
+						<!-- </a> -->
+						<!-- </form> -->
 					</div>
 				</div>
 

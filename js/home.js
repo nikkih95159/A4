@@ -63,8 +63,10 @@ function store() {
 	 }
 
 	else{
-    localStorage.setItem('username', newid.value);
-    localStorage.setItem('userpw', newpass.value);
+    	localStorage.setItem('username', newid.value);
+    	localStorage.setItem('userpw', newpass.value);
+		// window.open('../A4/pages/homepage.html');
+		window.location.replace('../A4/pages/homepage.html');
 	}
 }
 
@@ -82,7 +84,8 @@ function check() {
 		//if loginid is equal to signupid in localStorage and logpass is equal to signuppass open next page
     if (logid==storedName && logpass==storedPw){
 			//window.open directs user to next page by opening up a new tab
-      window.open('../A4/pages/homepage.html');
+	//   window.open('../A4/pages/homepage.html');
+	window.location.replace('../A4/pages/homepage.html');
 			//window.location.href directs user to next page without opening a new tab
       //window.location.href = '../A4/pages/homepage.html';
     }
