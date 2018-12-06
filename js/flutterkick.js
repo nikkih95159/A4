@@ -31,34 +31,33 @@ function initializePage() {
     }
     else {
         if (localStorage.selectedArms != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='hammercurl.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
         if (localStorage.selectedShoulders != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguideshoulders.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='reardeltflys.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedLegs != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidelegs.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='frontsquats.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedBack != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguideback.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='chinups.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedChest != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidechest.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='cablefly.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
-
     }
 }
 

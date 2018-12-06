@@ -11,19 +11,6 @@ $('.popover-dismiss').popover({
 	trigger: 'focus'
   })
 
-var allLocations = [
-	{
-	  name: "Costa Verde",
-	  latitude: 32.870637,
-	  longitude: -117.216731
-	},
-	{
-	  name: "La Regencia",
-	  latitude: 32.864531,
-	  longitude: -117.224677
-	}
-];
-
 var modal = document.getElementById('myModal');
 // Get the button that opens the modal
 var btn = document.getElementById("help");
@@ -42,67 +29,6 @@ window.onclick = function(event) {
 	if (event.target == modal) {
 		modal.style.display = "none";
 	}
-}
-function geoFindMe() {
-	var output = document.getElementById("out");
-  
-	if (!navigator.geolocation){
-	  output.innerHTML = "<p>Geolocation is not supported by your browser</p>";
-	  return;
-	}
-  
-	function success(position) {
-	  var latitude  = position.coords.latitude;
-	  var longitude = position.coords.longitude;
-	  
-	  output.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
-
-	}
-  
-	function error() {
-	  output.innerHTML = "Unable to retrieve your location";
-	}
-  
-	output.innerHTML = "<p>Locating…</p>";
-  
-	navigator.geolocation.getCurrentPosition(success, error);
-
-	// findClosest();
-
-	// function findClosest() {
-	// 	console.log("hi");
-	// 	var closest=allLocations[0];
-	// 	var closest_distance=distance(closest, position.coords);
-	// 	for(var i=1;i<allLocations.length;i++){
-	// 	if(distance(allLocations[i],position.coords) < closest_distance){
-	// 	  closest_distance=distance(allLocations[i],position.coords);
-	// 	  closest=allLocations[i];
-	// 		}
-	// 	}
-	// 	console.log('end');
-	// 	output.innerHTML = '<p>You are closest to: ' + closest.name+ '</p>';
-	// }
-
-}
-
-function distance(position1,position2){
-	var lat1=position1.latitude;
-	var lat2=position2.latitude;
-	var lon1=position1.longitude;
-	var lon2=position2.longitude;
-	var R = 6371000; // metres
-	var φ1 = lat1.toRadians();
-	var φ2 = lat2.toRadians();
-	var Δφ = (lat2-lat1).toRadians();
-	var Δλ = (lon2-lon1).toRadians();
-
-	var a = Math.sin(Δφ/2) * Math.sin(Δφ/2) +
-		Math.cos(φ1) * Math.cos(φ2) *
-		Math.sin(Δλ/2) * Math.sin(Δλ/2);
-	var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
-
-	var d = R * c;
-	return d;
 }
 
 function getLocation() {

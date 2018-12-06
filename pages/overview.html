@@ -23,29 +23,71 @@
     <div class="container">
 
         <div class="jumbotron">
-            <h1>Here is a suggested workout plan: </h1>
+            <h1>Here are some suggested workout plans: </h1>
+            <h4 class="text-muted">Click on the start button that corresponds to the workout you want to do!</h4>
         </div>
 
         <div class="container">
+            <div id="chosenLocation"></div>
             <div class="row">
+                <p style="color: green;">Recommended Plan: </p>
+            </div>
+            <div class="row">
+                <h5>Plan 1:</h5>
                 <div id="overviewArms"></div>
                 <div id="overviewShoulders"></div>
                 <div id="overviewLegs"></div>
                 <div id="overviewBack"></div>
                 <div id="overviewAbs"></div>
                 <div id="overviewChest"></div>
-                <hr>
+                <div class="col">
+                    <button type='button' style='float: right;' class='btn btn-primary' id='plan1' onclick="plan1()">Start Plan 1!</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h5>Plan 2:</h5>
+                <div id="overviewArms1"></div>
+                <div id="overviewShoulders1"></div>
+                <div id="overviewLegs1"></div>
+                <div id="overviewBack1"></div>
+                <div id="overviewAbs1"></div>
+                <div id="overviewChest1"></div>
+                <div class="col">
+                    <button type='button' style='float: right;' class='btn btn-primary' id='plan2' onclick="plan2()">Start Plan 2!</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <h5>Plan 3:</h5>
+                <div id="overviewArms2"></div>
+                <div id="overviewShoulders2"></div>
+                <div id="overviewLegs2"></div>
+                <div id="overviewBack2"></div>
+                <div id="overviewAbs2"></div>
+                <div id="overviewChest2"></div>
+                <div class="col">
+                    <button type='button' style='float: right;' class='btn btn-primary' id='plan3' onclick="plan3()">Start Plan 3!</button>
+                </div>
             </div>
         </div>
 
-        <div id="chosenLocation"></div>
-
         <div class="container">
-            <div id="start"></div>
+            <!-- <div id="start"></div> -->
             <a href="durationtime.html">
                 <button type="button" class="btn btn-info">Back</button>
             </a>
             <hr>
+        </div>
+
+        <div class="container">
+            <button type="button" id="myBtn" class="btn btn-secondary">Help?</button>
+        </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Look over the plans and choose one that you want to do! If you cannot choose, we recommend you start with Plan 1!</p>
+            </div>
         </div>
 
     </div>

@@ -5,39 +5,39 @@ $(document).ready(function() {
 
 function initializePage() {
 
-	document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
+    document.getElementById("duration").innerHTML = "<h5>Duration: " + localStorage.getItem("dividedTime") + " minutes</h5>";
 
-	if (localStorage.second === "shoulders") {
-		document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
+	if (localStorage.second === "back") {
+        document.getElementById("finishedWorkout").innerHTML = "<a href='lastpage.html'>" + 
         "<button type='button' style='float: right;' class='btn btn-outline-success'>Finished!</button></a>";
 	}
 	else {
-		if (localStorage.selectedChest != null) {
-			document.getElementById("nextWorkout").innerHTML = "<a href='videoguidechest.html'>" + 
+		if (localStorage.selectedShoulders != null) {
+			document.getElementById("nextWorkout").innerHTML = "<a href='shoulderpress.html'>" + 
 			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
 			return;
 		}
 
 		if (localStorage.selectedLegs != null) {
-			document.getElementById("nextWorkout").innerHTML = "<a href='videoguidelegs.html'>" + 
-			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
-			return;
-		}
-
-		if (localStorage.selectedBack != null) {
-			document.getElementById("nextWorkout").innerHTML = "<a href='videoguideback.html'>" + 
-			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
-			return;
-		}
-
-		if (localStorage.selectedAbs != null) {
-			document.getElementById("nextWorkout").innerHTML = "<a href='videoguideabs.html'>" + 
+			document.getElementById("nextWorkout").innerHTML = "<a href='highbarsquats.html'>" + 
 			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
 			return;
 		}
 
 		if (localStorage.selectedArms != null) {
-			document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
+			document.getElementById("nextWorkout").innerHTML = "<a href='tricepextensions.html'>" + 
+			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
+			return;
+		}
+
+		if (localStorage.selectedAbs != null) {
+			document.getElementById("nextWorkout").innerHTML = "<a href='russiantwist.html'>" + 
+			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
+			return;
+		}
+
+		if (localStorage.selectedChest != null) {
+			document.getElementById("nextWorkout").innerHTML = "<a href='pushup.html'>" + 
 			"<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
 			return;
         }

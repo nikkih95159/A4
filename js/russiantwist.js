@@ -31,34 +31,33 @@ function initializePage() {
     }
     else {
         if (localStorage.selectedArms != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidearms.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='tricepextensions.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
         if (localStorage.selectedShoulders != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguideshoulders.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='shoulderpress.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedLegs != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidelegs.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='highbarsquats.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedBack != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguideback.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='hyperextension.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
 
         if (localStorage.selectedChest != null) {
-            document.getElementById("nextWorkout").innerHTML = "<a href='videoguidechest.html'>" + 
+            document.getElementById("nextWorkout").innerHTML = "<a href='pushup.html'>" + 
             "<button type='button' style='float: right;' class='btn btn-primary' id='next'>Next</button></a>";
             return;
         }
-
     }
 }
 
