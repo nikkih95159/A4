@@ -1,5 +1,3 @@
-# A4
+# README
 
-Skeleton for our app: Gym Pal
-
-Contains basic pages for our gym app.
+Gym Pal is an app that creates workouts for beginners or anyone new to working out.
